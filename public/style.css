@@ -1,0 +1,138 @@
+/* Global Theme Variables */
+:root {
+  --bg: #303030;
+  --card: #424242;
+  --toolbar: #546e7a;
+  --text: #ffffff;
+  --muted: #bdbdbd;
+  --accent: #ff9800;
+  --button: #546e7a;
+  --error: #ff6e6e;
+  --success: #81c784;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.toolbar {
+  background: var(--toolbar);
+  padding: 16px 24px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.toolbar small {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.card {
+  background: var(--card);
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 32px 32px;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 4px;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--muted);
+  outline: none;
+}
+input:focus {
+  border-bottom: 2px solid var(--accent);
+}
+input.invalid {
+  border-bottom: 2px solid var(--error);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+  min-height: 1em;
+  margin-top: 4px;
+}
+
+.link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--button);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.15);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.message {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+.message.error-msg {
+  color: var(--error);
+}
+.message.success-msg {
+  color: var(--success);
+}
+
+.register {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
